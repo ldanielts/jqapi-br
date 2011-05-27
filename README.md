@@ -11,6 +11,7 @@ No final do projeto, será lançado oficialmente no portal jQueryBrasil e divulg
 ## Como saber se o que eu estou traduzindo não está sendo traduzido por alguém?
 
 O documento com as traduções restantes e os responsáveis está disponível no link abaixo:
+
 https://spreadsheets.google.com/spreadsheet/pub?hl=pt_BR&hl=pt_BR&key=0ApukeXSfzpSodHFqc3Y3S2g3elE0YmYwNHZwSE9qM2c&output=html
 
 ## Como posso marcar um conteúdo que eu irei traduzir?
