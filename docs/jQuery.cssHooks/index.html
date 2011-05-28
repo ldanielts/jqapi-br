@@ -14,47 +14,46 @@
 </div>
 <div id="jQuery-cssHooks1" class="entry property">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.cssHooks</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
+<span class="name">jQuery.cssHooks</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Provides a way to hook directly into jQuery to override how particular CSS properties are retrieved or set. Amongst other uses, cssHooks can be used to create custom, browser-normalized properties for CSS3 features such as box-shadows and gradients.</p>
+<p class="desc"><strong>Descrição: </strong>Esta funcionalidade permite que se estenda a biblioteca jQuery na sua interface para CSS, permitindo que se crie uma espécie de mini-plugin destinado a normalizar propriedades CSS implementadas de modo proprietário nos navegadores. Entre outros usos podemos citar o suporte para propriedades CSS3 tais como box-shadows e gradients.</p>
 <ul class="signatures"><li class="signature" id="jQuery-cssHooks"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.3/">1.4.3</a></span>jQuery.cssHooks</h4></li></ul>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span> jQuery.cssHooks</h4></li></ul>
 <div class="longdesc">
-<p>The $.cssHooks object provides a way to define functions for getting and setting particular CSS values. This can also be used to create new cssHooks for normalizing CSS3 properties - eg. Webkit-based browsers such as Google Chrome require you to use -webkit-border-radius to set the border-radius on an element, whilst Firefox require -moz-border-radius.</p>
-<p> With a cssHook this can however be normalized to something like 'border-radius'  so that only one property needs to be set. In addition to providing fine-grained control over how specific style properties are handled, $.cssHooks also extends the set of properties available to the animate() method.</p>
+<p>O objeto $.cssHooks fornece meios de se criar funções destinadas a inspecionar ou definir valores para propriedades CSS particulares. Pode ser usado para normalizar  sintaxe de propriedades CSS - por exemplo: navegadores que usam a engine  Webkit, tais como o Google Chrome reconhecem a declaração CSS -webkit-border-radius para definir o raio das bordas border-radius de um elemento enquanto o Firefox reconhece a declração -moz-border-radius para o mesmo fim.</p>
+<p> Com a normalização  podemos fazer com que todos os navegadores reconheçam 'border-radius'. Para um ajuste fino o objeto $.cssHooks estende ainda suas funcionalidades a todas as propriedades previstas para o método animate().</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Defining a new cssHook: defining new cssHooks is very straight-forward and the skeleton template below can be used as a guide to creating your own. </span>
+<h4>Exemplo: <span class="desc">Definir um novo cssHook: para  definição de um cssHooks usamos um código com estrutura fixa, cujo esqueleto de template mostramos a seguir e que poderá ser usado para criar seus próprios  cssHooks.</span>
 </h4>
 <pre class="prettyprint"><code class="example"> (function($){   
-//first, check to see if cssHooks are supported
+// começamos verificando o suporte para cssHooks 
     if ( !$.cssHooks ){
-        //if not, output an error message
-        alert("jQuery 1.4.3 or above is required for this plugin to work");
+        // se não for suportado apresenta uma mensagem ao usuário
+        alert("jQuery 1.4.3 ou posterior é necessária para que este plugin funcione");
         return;
     }
     
 $.cssHooks['someCSSProperty'] = { 
         get: function(elem, computed, extra){
-            //handle getting the CSS property
+            // manipulador de inspeção do valor da propriedade
         },
         set: function(elem, value){
-            //handle setting the CSS value 
+            // manipulador de definição do valor da propriedade 
         }
 };
 })(jQuery);
   </code></pre>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Normalizing vendor-specific CSS properties: as mentioned, cssHooks are commonly used for normalizing vendor-specific CSS3 properties. In order to effectively cater for this, it is necessary to check that the browser supports the property before we can normalize it. We will be demonstrating this with the border-radius feature.</span>
+<h4>Exemplo: <span class="desc">Normalizar propriedade CSS proprietária: como já mencionamos cssHooks são normalmente usados para normalizar propriedades proprietárias. Contudo, é necessário verificar se o navegador suporta a propriedade que queremos normalizar. Vamos demonstrar esta funcionalidade normalizando a propriedade border-radius.</span>
 </h4>
 <pre class="prettyprint"><code class="example">
-//check if we can access the border radius on the element's style object. 
-//A value of "" or "undefined" will be returned if the property is not 
-//supported
+//verificar se existe a propriedade border-radius no objeto elemento style. 
+//O valor "" ou "undefined" retornará se a propriedade não for suportada.
 
 var div = document.createElement( "div" );
 $.support.borderRadius =
@@ -63,12 +62,12 @@ div.style.WebkitBorderRadius === ''? 'WebkitBorderRadius' :
 (div.style.borderRadius === ''? 'borderRadius' : false));</code></pre>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">If the above test is now integrated into the the skeleton template provided in the first example, a complete cssHook can be defined as follows:</span>
+<h4>Exemplo: <span class="desc">Inserindo o teste anterior no esqueleto do template mostrado no primeiro exemplo um  cssHook completo será como mostrado a seguir:</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 (function($){
     if ( !$.cssHooks ){
-        alert("jQuery 1.4.3+ is needed for this plugin to work");
+        alert("jQuery 1.4.3 ou posterior é necessária para que este plugin funcione");
         return;
     }
     var div = document.createElement( "div" );
@@ -77,7 +76,7 @@ div.style.WebkitBorderRadius === ''? 'WebkitBorderRadius' :
     (div.style.MozBorderRadius === ''? 'MozBorderRadius' : 
     (div.style.borderRadius === ''? 'borderRadius'  : false));
     
-    //only set cssHooks for browsers that don't support "borderRadius" natively
+    //define cssHooks somente para navegadores que não suportam "borderRadius" nativamente
     if ( $.support.borderRadius &amp;&amp; $.support.borderRadius !== "borderRadius" ){
         $.cssHook.borderRadius = {
            get: function( elem, computed, extra ){
@@ -91,17 +90,17 @@ div.style.WebkitBorderRadius === ''? 'WebkitBorderRadius' :
 })(jQuery);</code></pre>
 </div>
 <div id="example-3">
-<h4>Example: <span class="desc">You can then set the border radius (in a supported browser) as follows:</span>
+<h4>Exemplo: <span class="desc">Você pode definir border radius (em navegador que a suporte) como mostrado a seguir:</span>
 </h4>
 <pre class="prettyprint"><code class="example"> $("#element").css("border-radius", "20px");</code></pre>
 </div>
 <div id="example-4">
-<h4>Example: <span class="desc">Creating a cssHook for normalizing border images: similar to the example where the border radius was normalized, in the below we apply the same concept to border images. As you can see, in many cases normalization is quite straight-forward to achieve.</span>
+<h4>Exemplo: <span class="desc">Criar um cssHook para normlizar border images: de modo semelhante ao exemplo mostrando a normalização de  border-radius aplicamos o mesmo conceito para border images. Como você pode notar o processo de normalização segue uma estrutura rígida.</span>
 </h4>
 <pre class="prettyprint"><code class="example"> (function($){
     
     if ( !$.cssHooks ){
-        alert("jQuery 1.4.3+ is needed for this plugin to work");
+        alert("jQuery 1.4.3 ou posterior é necessária para que este plugin funcione");
         return;
     }
 var div = document.createElement( "div" );
@@ -126,15 +125,14 @@ var div = document.createElement( "div" );
   </code></pre>
 </div>
 <div id="example-5">
-<h4>Example: <span class="desc">Getting your cssHook to work with animate(): to allow your cssHook to be used with .animate() you can simply do the following:</span>
+<h4>Exemplo: <span class="desc">Criar cssHook para animate(): Para criar cssHook que funcione com .animate() você simplesmente faz o seguinte:</span>
 </h4>
 <pre class="prettyprint"><code class="example"> $.fx.step['someCSSProperty'] = function(fx){
         $.cssHooks['someCSSProperty'].set(fx.elem, fx.now + fx.unit);  
 };
 
-//Note that the above works best for simple numeric value animations 
-//and more custom //code may be required depending on the complexity 
-//of what you're trying to achieve.
+//Notar que o código funciona melhor para animações com valores numéricos
+//para animações mais complexas, mais código é necessário 
  
   </code></pre>
 </div>
