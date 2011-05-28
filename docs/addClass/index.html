@@ -14,39 +14,39 @@
 </div>
 <div id="addClass1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.addClass( className )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.addClass( className )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Adds the specified class(es) to each of the set of matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Este método adiciona uma ou mais classes a cada um dos elementos alvo de um seletor jQuery.</p>
 <ul class="signatures">
 <li class="signature" id="addClass-className">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.addClass( className )</h4>
-<p class="arguement"><strong>className</strong>One or more class names to be added to the class attribute of each matched element.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a> </span>.addClass( className )</h4>
+<p class="arguement"><strong>className</strong>Um ou mais nomes a serem adicionados ao atributo classe de cada elemento alvo de um seletor jQuery.</p>
 </li>
 <li class="signature" id="addClass-functionindex- currentClass">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.addClass( function(index, currentClass) )</h4>
-<p class="arguement"><strong>function(index, currentClass)</strong>A function returning one or more space-separated class names to be added. Receives the index position of the element in the set and the old class value as arguments.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4/">1.4</a> </span>.addClass( function(index, currentClass) )</h4>
+<p class="arguement"><strong>function(index, currentClass)</strong>Define uma função retornando um ou mais nomes de classe, separados por vírgula, para serem adicionados. Os argumentos desta função são: o índice que define a posição do elemento no conjunto alvo da seleção e o valor da atual classe.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>It's important to note that this method does not replace a class. It simply adds the class, appending it to any which may already be assigned to the elements.</p>
-<p>More than one class may be added at a time, separated by a space, to the set of matched elements, like so:</p>
-<pre>$("p").addClass("myClass yourClass");</pre>
-<p>This method is often used with <code>.removeClass()</code> to switch elements' classes from one to another, like so:</p>
+<p>É importante ressaltar que este método não troca o valor da classe atual. Ele simplesmente adiciona o(s) novo(s) valores(s) ao valor que já fora definido para o atributo classe do elemento.</p>
+<p>Pode-se adicionar mais de um valor para a classe ao mesmo tempo, separando-os por espaço, conforme mostrado a seguir:</p>
+<pre>$("p").addClass("myClass noClass");</pre>
+<p>Este método é usado com frequência em conjunto com o método <code>.removeClass()</code> com a finalidade de proceder uma troca do valor da classe de um elemento conforme mostrado a seguir:</p>
 <pre>$("p").removeClass("myClass noClass").addClass("yourClass");</pre>
-<p>Here, the <code>myClass</code> and <code>noClass</code> classes are removed from all paragraphs, while <code>yourClass</code> is added.</p>
-<p>As of jQuery 1.4, the <code>.addClass()</code> method's argument can receive a function.</p>
+<p>Neste exemplo os valores <code>myClass</code> e <code>noClass</code> são removidos de todos os parágrafos e o valor <code>yourClass</code> é adicionado.</p>
+<p>A partir da versão 1.4 da biblioteca jQuery o método <code>.addClass()</code> pode receber uma função como argumento.</p>
 <pre>$("ul li:last").addClass(function() {
   return "item-" + $(this).index();
 });</pre>
-<p>Given an unordered list with five <code>&lt;li&gt;</code> elements, this example adds the class "item-4" to the last <code>&lt;li&gt;</code>.</p>
+<p>Dada uma lista ordenada com cinco itens - elementos <code>&lt;li&gt;</code> - o código do exemplo mostrado adiciona o valor "item-4" ao atributo classe do último item - elemento <code>&lt;li&gt;</code> - da lista.</p>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Adds the class "selected" to the matched elements.</span>
+<h4>Exemplo: <span class="desc">Acrescenta o valor "selected" ao atributo classe dos elementos alvo da seleção jQuery.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -60,9 +60,9 @@
 &lt;/head&gt;
 &lt;body&gt;
   
-  &lt;p&gt;Hello&lt;/p&gt;
-  &lt;p&gt;and&lt;/p&gt;
-  &lt;p&gt;Goodbye&lt;/p&gt;
+  &lt;p&gt;Olá&lt;/p&gt;
+  &lt;p&gt;e&lt;/p&gt;
+  &lt;p&gt;Adeus&lt;/p&gt;
   
 &lt;script&gt;
   $("p:last").addClass("selected");
@@ -74,7 +74,7 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Adds the classes "selected" and "highlight" to the matched elements.</span>
+<h4>Exemplo: <span class="desc">Acrescenta o valor "selected" ao atributo classe dos elementos alvo da seleção jQuery ao mesmo tempo que os coloca em destaque.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -87,9 +87,9 @@
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;Hello&lt;/p&gt;
-  &lt;p&gt;and&lt;/p&gt;
-  &lt;p&gt;Goodbye&lt;/p&gt;
+  &lt;p&gt;Olá&lt;/p&gt;
+  &lt;p&gt;e&lt;/p&gt;
+  &lt;p&gt;Adeus&lt;/p&gt;
 &lt;script&gt;
   $("p:last").addClass("selected highlight");
   &lt;/script&gt;
@@ -100,7 +100,7 @@
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Pass in a function to .addClass() to add the "green" class to a div that already has a "red" class.</span>
+<h4>Exemplo: <span class="desc">Passa uma função como argumento do método .addClass() que retorna o valor "green" para ser adicionado ao atributo classe de um div cujo atributo classe já tem o valor "red".</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -114,11 +114,11 @@
 &lt;/head&gt;
 &lt;body&gt;
   
- &lt;div&gt;This div should be white&lt;/div&gt;
- &lt;div class="red"&gt;This div will be green because it now has the "green" class.
-   It would be red if the addClass function failed.&lt;/div&gt;
- &lt;div&gt;This div should be white&lt;/div&gt;
- &lt;p&gt;There are zero green divs&lt;/p&gt;
+ &lt;div&gt;Este div tem o fundo na cor branca&lt;/div&gt;
+ &lt;div class="red"&gt;Este div tem o fundo na cor verde porque o valor "green" foi adicionado ao seu atributo classe.
+   O fundo será vermelho se a função addClass falhar.&lt;/div&gt;
+ &lt;div&gt;Este div tem o fundo na cor branca&lt;/div&gt;
+ &lt;p&gt;Não existem divs com fundo na cor verde&lt;/p&gt;
 
 &lt;script&gt;
   $("div").addClass(function(index, currentClass) {
@@ -126,7 +126,7 @@
 
     if ( currentClass === "red" ) {
       addedClass = "green";
-      $("p").text("There is one green div");
+      $("p").text("Existe um div com o fundo na cor verde");
     }
   
     return addedClass;
