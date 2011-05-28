@@ -19,3 +19,9 @@ https://spreadsheets.google.com/spreadsheet/pub?hl=pt_BR&hl=pt_BR&key=0ApukeXSfz
 Basta enviar um e-mail para jquerybrasil@gmail.com com o seu nome, o que você irá traduzir e a previsão de término. Seu nome será incluido no documento acima e você já pode começar a colaborar!
 
 **Contamos com a colaboração de todos para ter cada vez melhores resultados**
+
+## Como atualizar meu fork com as novas atualizações deste repositório?
+
+>git remote add upstream https://github.com/luiztiago/jqapi-br.git (url origem do fork)
+>git pull upstream pt-br (nome do branch)
+>git push
