@@ -14,28 +14,28 @@
 </div>
 <div id="hasClass1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.hasClass( className )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Boolean">Boolean</a></span>
+<span class="name">.hasClass( className )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Boolean">Boolean</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Determine whether any of the matched elements are assigned the given class.</p>
+<p class="desc"><strong>Descrição: </strong>Este método destina-se a inspecionar se um elemento possui o atributo class com um determinado valor.</p>
 <ul class="signatures"><li class="signature" id="hasClass-className">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>.hasClass( className )</h4>
-<p class="arguement"><strong>className</strong>The class name to search for.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.2/">1.2</a></span> .hasClass( className )</h4>
+<p class="arguement"><strong>className</strong> O valor da classe a se inspecionar.</p>
 </li></ul>
 <div class="longdesc">
-<p>Elements may have more than one class assigned to them. In HTML, this is represented by separating the class names with a space:</p>
+<p>É válido definir mais de um valor para o atributo class de um elemento. A sintaxe HTML prevê, nestes casos, que os valores do atributo class sejam separados por um espaço, com mostrado a seguir:</p>
 <pre>&lt;div id="mydiv" class="foo bar"&gt;&lt;/div&gt;</pre>
-<p>The <code>.hasClass()</code> method will return <code>true</code> if the class is assigned to an element, even if other classes also are. For example, given the HTML above, the following will return <code>true</code>:</p>
+<p>O método <code>.hasClass()</code> retorna <code>true</code> se o valor da classe estiver presente no atributo class, mesmo que existam outros valores naquele atributo. Por exemplo: Para a marcação HTML mostrada anteriormente os dois códigos a seguir retornam <code>true</code>:</p>
 <pre>$('#mydiv').hasClass('foo')</pre>
-<p>As would:</p>
+<p>e:</p>
 <pre>$('#mydiv').hasClass('bar')</pre>
-<p>While this would return <code>false</code>:</p>
+<p>O código a seguir retorna <code>false</code>:</p>
 <pre>$('#mydiv').hasClass('quux')</pre>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Looks for the paragraph that contains 'selected' as a class.</span></h4>
+<h4><span class="desc">Procurando o parágrafo que tem o valor 'selected' no atributo class.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -47,12 +47,12 @@
 &lt;/head&gt;
 &lt;body&gt;
   
-  &lt;p&gt;This paragraph is black and is the first paragraph.&lt;/p&gt;
-  &lt;p class="selected"&gt;This paragraph is red and is the second paragraph.&lt;/p&gt;
+  &lt;p&gt;Este é o primeiro parágrafo e tem a cor preta.&lt;/p&gt;
+  &lt;p class="selected"&gt;Este é o segundo parágrafo e tem a cor vermelha.&lt;/p&gt;
 
-  &lt;div id="result1"&gt;First paragraph has selected class: &lt;/div&gt;
-  &lt;div id="result2"&gt;Second paragraph has selected class: &lt;/div&gt;
-  &lt;div id="result3"&gt;At least one paragraph has selected class: &lt;/div&gt;
+  &lt;div id="result1"&gt;O primeiro parágrafo tem o valor selected no atributo class: &lt;/div&gt;
+  &lt;div id="result2"&gt;O segundo parágrafo tem o valor selected no atributo class: &lt;/div&gt;
+  &lt;div id="result3"&gt;Pelo menos um parágrafo tem o valor selected no atributo class: &lt;/div&gt;
 &lt;script&gt;
 $("div#result1").append($("p:first").hasClass("selected").toString());
 $("div#result2").append($("p:last").hasClass("selected").toString());
