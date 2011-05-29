@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">.empty()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/manipulation/" title="View all posts in Manipulation">Manipulation</a> &gt; <a href="http://api.jquery.com/category/manipulation/dom-removal/" title="View all posts in DOM Removal">DOM Removal</a></span>
   
 
@@ -14,31 +14,31 @@
 </div>
 <div id="empty1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.empty()</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.empty()</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Remove all child nodes of the set of matched elements from the DOM.</p>
+<p class="desc"><strong>Descrição: </strong>Remove todos os nós filhos contidos no conjunto de elementos do DOM.</p>
 <ul class="signatures"><li class="signature" id="empty"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.empty()</h4></li></ul>
+<span class="versionAdded">versão que foi adicionada: <a href="/category/version/1.0/">1.0</a></span>.empty()</h4></li></ul>
 <div class="longdesc">
-<p>This method removes not only child (and other descendant) elements, but also any text within the set of matched elements. This is because, according to the DOM specification, any string of text within an element is considered a child node of that element. Consider the following HTML:</p>
+<p>Este método não remove apenas um filho (e outros descendentes) elementos, mas também todo o texto dentro do conjunto de elementos combinados. Isso porque, de acordo com a especificação do DOM, qualquer cadeia de texto dentro de um elemento é considerado um nó filho deste elemento. Considere o seguinte código HTML:</p>
 <pre>&lt;div class="container"&gt;
   &lt;div class="hello"&gt;Hello&lt;/div&gt;
   &lt;div class="goodbye"&gt;Goodbye&lt;/div&gt;
 &lt;/div&gt;</pre>
-<p>We can target any element for removal:</p>
+<p>Nós podemos selecionar qualquer elemento para remover:</p>
 <pre>$('.hello').empty();</pre>
-<p>This will result in a DOM structure with the <code>Hello</code> text deleted:</p>
+<p>Isto irá resultar na estrutura DOM com o texto <code>Hello</code> excluído:</p>
 <pre>&lt;div class="container"&gt;
   &lt;div class="hello"&gt;&lt;/div&gt;
   &lt;div class="goodbye"&gt;Goodbye&lt;/div&gt;
 &lt;/div&gt;</pre>
-<p>If we had any number of nested elements inside <code>&lt;div class="hello"&gt;</code>, they would be removed, too. </p>
-<p>To avoid memory leaks, jQuery removes other constructs such as data and event handlers from the child elements before removing the elements themselves.</p>
+<p>Se tivéssemos qualquer número de elementos aninhados dentro do <code>&lt;div class="hello"&gt;</code>, eles seriam removidos também.</p>
+<p>Para evitar desperdício de memória, o jQuery remove outros conteúdos, como dados e manipuladores de eventos a partir dos elementos filhos antes de remover os próprios elementos.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Removes all child nodes (including text nodes) from all paragraphs</span></h4>
+<h4><span class="desc">Remove todos os nós filhos (incluindo os textos) de todos os parágrafos.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
