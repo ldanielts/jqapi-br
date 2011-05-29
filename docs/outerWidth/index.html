@@ -14,24 +14,23 @@
 </div>
 <div id="outerWidth1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.outerWidth( [ includeMargin ] )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Integer">Integer</a></span>
+<span class="name">.outerWidth( [ includeMargin ] )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Integer">Integer</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Get the current computed width for the first element in the set of matched elements, including padding and border.</p>
+<p class="desc"><strong>Description: </strong>Este método retorna o valor da propriedade CSS width definida para o primeiro elemento do conjunto de elementos alvo do seletor jQuery. No valor retornado está incluído o valor de padding, border e opcionalmente o de margin.</p>
 <ul class="signatures"><li class="signature" id="outerWidth-includeMargin">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2.6/">1.2.6</a></span>.outerWidth( [ includeMargin ] )</h4>
-<p class="arguement"><strong>includeMargin</strong>A Boolean indicating whether to include the element's margin in the calculation.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.2.6/">1.2.6</a></span> .outerWidth( [ includeMargin ] )</h4>
+<p class="arguement"><strong>includeMargin</strong>Valor booleano indicando se deverá ou não ser incluido o valor de margin no cálculo da largura retornada.</p>
 </li></ul>
 <div class="longdesc">
-<p>Returns the width of the element, along with left and right padding, border, and optionally margin, in pixels.</p>
-<p>If <code>includeMargin</code> is omitted or <code>false</code>, the padding and border are included in the calculation; if <code>true</code>, the margin is also included.</p>
-<p>This method is not applicable to <code>window</code> and <code>document</code> objects; for these, use <code><a href="/width">.width()</a></code> instead.</p>
+<p>Os valores de padding e border top e bottom são sempre incluídos no cálculo de <code>.outerWidth()</code>; se o parâmetro <code>includeMargin</code> estiver presente (<code>true</code>) então margin (left e rigth) também serão incluídas no cálculo.</p>
+<p>Este método não se aplica aos objetos <code>window</code> e <code>document</code>, para estes objetos use o método <code><a href="/width">.width()</a></code>.</p>
 <p class="image"><img src="/images/0042_04_06.png"></p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Get the outerWidth of a paragraph.</span></h4>
+<h4><span class="desc">Retorna outerWidth do parágrafo.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
