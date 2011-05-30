@@ -14,7 +14,7 @@
 </div>
 
 <div class="toc">
-<h4><span>Contents:</span></h4>
+<h4><span>Índice:</span></h4>
 <ul class="toc-list">
 <li>
 <a href="#width1">width() </a><ul><li>.width()
@@ -32,23 +32,23 @@
 </div>
 <div id="width1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.width()</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Integer">Integer</a></span>
+<span class="name">.width()</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Integer">Integer</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Get the current computed width for the first element in the set of matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Este método retorna o valor da propriedade CSS width definida para o primeiro elemento do conjunto de elementos alvo do seletor jQuery.</p>
 <ul class="signatures"><li class="signature" id="width"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.width()</h4></li></ul>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .width()</h4></li></ul>
 <div class="longdesc">
-<p>The difference between <code>.css(width)</code> and <code>.width()</code> is that the latter returns a unit-less pixel value (for example, <code>400</code>) while the former returns a value with units intact (for example, <code>400px</code>). The <code>.width()</code> method is recommended when an element's width needs to be used in a mathematical calculation.</p>
+<p>A diferença entre os métodos <code>.css('width')</code> e <code>.width()</code> é que o segundo retorna um número puro (sem unidade) representando o valor da largura do elemento (por exemplo: <code>400</code>) e o primeiro retorna o valor da largura com sua respectiva unidade de medida (por exemplo <code>400px</code>). O método <code>.width()</code> é recomendado quando o valor da altura do elemento destina-se a ser usado em cálculos matemáticos.</p>
 <p class="image"><img src="/images/0042_04_04.png"></p>
-<p>This method is also able to find the width of the window and document.</p>
-<pre>$(window).width();   // returns width of browser viewport
-$(document).width(); // returns width of HTML document</pre>
-<p>Note that <code>.width()</code> will always return the content width, regardless of the value of the CSS <code>box-sizing</code> property.</p>
+<p>Com esse método podemos, também,  encontrar a largura da janela (window) do navegador bem como a largura do documento.</p>
+<pre>$(window).width();   // retorna a largura da janela do navegador (viewport)
+$(document).width(); // retorna a largura do documento HTML</pre>
+<p>Convém notar que <code>.width()</code> retorna a largura correspondente ao conteúdo do elemento de acordo com a propriedade CSS <code>box-sizing</code> (por padrão sem considerar padding, border e margin).</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Show various widths.  Note the values are from the iframe so might be smaller than you expected.  The yellow highlight shows the iframe body.</span></h4>
+<h4><span class="desc">Este exemplo exemplifica o uso deste método, mostrando a inspeção de três larguras.  Atenção que os valores retornados se referem ao iframe que contém o exemplo, por esta razão tais valores são menores dos que aqueles para a página como um todo. Destacamos o elemento body do iframe com um fundo na cor amarela.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -95,30 +95,30 @@ $(document).width(); // returns width of HTML document</pre>
 </div>
 <div id="width2" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.width( value )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.width( value )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Set the CSS width of each element in the set of matched elements.</p>
+<p class="desc"><strong>Descrição: </strong>Define a propriedades CSS width para o conjunto dos elementos alvo do seletor jQuery.</p>
 <ul class="signatures">
 <li class="signature" id="width-value">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.width( value )</h4>
-<p class="arguement"><strong>value</strong>An integer representing the number of pixels, or an integer along with an optional unit of measure appended (as a string).</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.0/">1.0</a></span> .width( value )</h4>
+<p class="arguement"><strong>value</strong> Um número inteiro definindo a largura em pixels se a unidade de medida não for especificada ou na unidade de medida se especificada.</p>
 </li>
 <li class="signature" id="width-functionindex- width">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.1/">1.4.1</a></span>.width( function(index, width) )</h4>
-<p class="arguement"><strong>function(index, width)</strong>A function returning the width to set. Receives the index position of the element in the set and the old width as arguments.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4.1/">1.4.1</a></span> .width( function(index, width) )</h4>
+<p class="arguement"><strong>function(index, width)</strong>Define uma função retornando o valor da propriedade  CSS width a ser adicionada ao elemento. Os argumentos desta função são: o índice que define a posição do elemento no conjunto alvo da seleção e o valor atual da propriedade width.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>When calling <code>.width('value')</code>, the value can be either a string (number and unit) or a number. If only a number is provided for the value, jQuery assumes a pixel unit. If a string is provided, however, any valid CSS measurement may be used for the width (such as <code>100px</code>, <code>50%</code>, or <code>auto</code>). Note that in modern browsers, the CSS width property does not include padding, border, or margin, unless the <code>box-sizing</code> CSS property is used.</p>
-<p>If no explicit unit was specified (like 'em' or '%') then "px" is concatenated to the value.</p>
-<p>Note that <code>.width('value')</code> sets the width of the box in accordance with the CSS <code>box-sizing</code> property. Changing this property to <code>border-box</code> will cause this function to change the outerWidth of the box instead of the content width.</p>
+<p>Assim, podemos chamar o método <code>.width(value)</code> com o parâmetro value podendo ser uma string (número e unidade de medida) ou simplesmente um número. Se for chamado com somente um número jQuery assume que a unidade de medida é o pixel. Se for chamado com uma string deve-se usar uma unidade de medida CSS válida (tais como <code>100px</code>, <code>50%</code>, ou <code>auto</code>). Lembre-se que em navegadores modernos a medida CSS width não inclui padding, border ou margin.</p>
+<p>Se não for explicitamente declarada uma medida (como 'em' ou '%') então "px" será concatenado ao valor.</p>
+<p>Notar que <code>.width(value)</code> define  altura do conteúdo do elemento de acordo com a propriedade CSS <code>box-sizing</code>. Se alterarmos esta propriedade para <code>border-box</code> o método altera outerWidth do box em vez de width do conteúdo.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples-1"><div id="example-1-0">
-<h4><span class="desc">To set the width of each div on click to 30px plus a color change.</span></h4>
+<h4><span class="desc">Neste exemplo ao se clicar no div alteramos suas larguras para 30px e mudamos sua cor de fundo.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
