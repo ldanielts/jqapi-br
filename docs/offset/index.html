@@ -14,7 +14,7 @@
 </div>
 
 <div class="toc">
-<h4><span>Contents:</span></h4>
+<h4><span>Índice:</span></h4>
 <ul class="toc-list">
 <li>
 <a href="#offset1">offset() </a><ul><li>.offset()
@@ -32,21 +32,21 @@
 </div>
 <div id="offset1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.offset()</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
+<span class="name">.offset()</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Get the current coordinates of the first element in the set of matched elements, relative to the document.</p>
+<p class="desc"><strong>Description: </strong>Este método retorna um objeto contendo os valores das coordenadas (relativas ao documento) do primeiro elemento do conjunto de elementos alvo do seletor jQuery.</p>
 <ul class="signatures"><li class="signature" id="offset"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>.offset()</h4></li></ul>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.2/">1.2</a> </span>.offset()</h4></li></ul>
 <div class="longdesc">
-<p>The <code>.offset()</code> method allows us to retrieve the current position of an element <em>relative to the document</em>. Contrast this with <code>.position()</code>, which retrieves the current position <em>relative to the offset parent</em>. When positioning a new element on top of an existing one for global manipulation (in particular, for implementing drag-and-drop), <code>.offset()</code> is the more useful.</p>
-<p><code>.offset()</code> returns an object containing the properties <code>top</code> and <code>left</code>.</p>
-<blockquote><p><strong>Note:</strong> jQuery does not support getting the offset coordinates of hidden elements or accounting for borders, margins, or padding set on the body element.</p></blockquote>
+<p>O método <code>.offset()</code> permite inspecionar a posição de um elemento <em>em relação ao documento</em>. Difere do método <code>.position()</code> porque com este inspeciona-se a posição de elemento <em>em relação ao seu elemento-pai</em>. Este método é útil para posicionar um elemento sobre outro quando se pretende realizar manipulação global com ele (em particular para implementação de drag-and-drop).</p>
+<p>O método <code>.offset()</code> retorna um objeto contendo as propriedades CSS <code>top</code> e <code>left</code>.</p>
+<blockquote><p><strong>Nota:</strong> Não existe um método jQuery  para inspecionar as coordendas de elementos estilizados como hidden e. Este método não considera para cálculo de coordenadas os valores de borders, margins ou padding definidos para o elemento body.</p></blockquote>
 </div>
-<h3>Examples:</h3>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Access the offset of the second paragraph:</span>
+<h4>Exemplo: <span class="desc">Inspecionar as coordenadas do segundo parágrafo:</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -57,7 +57,7 @@ p { margin-left:10px; }
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;2nd Paragraph&lt;/p&gt;
+  &lt;p&gt;Olá&lt;/p&gt;&lt;p&gt;segundo parágrafo&lt;/p&gt;
 &lt;script&gt;var p = $("p:last");
 var offset = p.offset();
 p.html( "left: " + offset.left + ", top: " + offset.top );&lt;/script&gt;
@@ -68,7 +68,7 @@ p.html( "left: " + offset.left + ", top: " + offset.top );&lt;/script&gt;
 <div class="demo code-demo"></div>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Click to see the offset.</span>
+<h4>Exemplo: <span class="desc">Clique para inspecionar as coordenadas.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -84,9 +84,9 @@ div.abs { width:50px; height:50px; position:absolute;
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;div id="result"&gt;Click an element.&lt;/div&gt;
+  &lt;div id="result"&gt;Clique em um elemento.&lt;/div&gt;
 &lt;p&gt;
-  This is the best way to &lt;span&gt;find&lt;/span&gt; an offset.
+  Este é o melhor caminho para &lt;span&gt;encontrar&lt;/span&gt; as coordenadas.
 &lt;/p&gt;
 
 &lt;div class="abs"&gt;
@@ -112,26 +112,26 @@ $("*", document.body).click(function (e) {
 </div>
 <div id="offset2" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.offset( coordinates )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
+<span class="name">.offset( coordinates )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Set the current coordinates of every element in the set of matched elements, relative to the document.</p>
+<p class="desc"><strong>Descrição: </strong>Define as coordenadas (relativas ao documento) para cada um dos elementos alvo do seletor jQuery.</p>
 <ul class="signatures">
 <li class="signature" id="offset-coordinates">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.offset( coordinates )</h4>
-<p class="arguement"><strong>coordinates</strong>An object containing the properties <code>top</code> and <code>left</code>, which are integers indicating the new top and left coordinates for the elements.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4/">1.4</a></span> .offset( coordinates )</h4>
+<p class="arguement"><strong>coordinates</strong> Objeto contendo as propriedades <code>top</code> e <code>left</code>  (números inteiros) definindo as novas coordenadas dos elementos.</p>
 </li>
 <li class="signature" id="offset-functionindex- coords">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.offset( function(index, coords) )</h4>
-<p class="arguement"><strong>function(index, coords)</strong>A function to return the coordinates to set. Receives the index of the element in the collection as the first argument and the current coordinates as the second argument. The function should return an object with the new <code>top</code> and <code>left</code> properties.</p>
+<span class="versionAdded">criado na versão: <a href="/category/version/1.4/">1.4</a></span> .offset( function(index, coords) )</h4>
+<p class="arguement"><strong>function(index, coords)</strong>Define uma função retornando o valor das novas coordenadas do elemento. Os argumentos desta função são: o índice que define a posição do elemento no conjunto alvo da seleção e o valor atual das coordendas do elemento. Esta função deverá retornar um objeto contendo as novas propriedades <code>top</code> e <code>left</code>.</p>
 </li>
 </ul>
-<div class="longdesc"><p>The <code>.offset()</code> setter method allows us to reposition an element. The element's position is specified <em>relative to the document</em>. If the element's <code>position</code> style property is currently <code>static</code>, it will be set to <code>relative</code> to allow for this repositioning.</p></div>
+<div class="longdesc"><p>O método <code>.offset()</code> para definir coordenadas nos permite alterar a posição de um elemento. A posição do elemento é considerada <em>em relação ao documento</em>. Se a posição do elemento foi definida em folha de estilo com a propriedade <code>position</code> definida para <code>static</code>  ela deverá ser sobrescrita para posicionamento com valor <code>relative</code> de modo a possibilitar o novo posicionamento do elemento.</p></div>
 <h3>Example:</h3>
 <div class="entry-examples" id="entry-examples-1"><div id="example-1-0">
-<h4><span class="desc">Set the offset of the second paragraph:</span></h4>
+<h4><span class="desc">Definir as coordenadas do segundo parágrafo:</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -139,7 +139,7 @@ $("*", document.body).click(function (e) {
   &lt;script src="http://code.jquery.com/jquery-git.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;2nd Paragraph&lt;/p&gt;
+  &lt;p&gt;Alô&lt;/p&gt;&lt;p&gt;Segundo parágrafo&lt;/p&gt;
 &lt;script&gt;$("p:last").offset({ top: 10, left: 30 });&lt;/script&gt;
 
 &lt;/body&gt;
