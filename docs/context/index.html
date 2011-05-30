@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">.context</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/internals/" title="View all posts in Internals">Internals</a></span> | <span class="category"><a href="http://api.jquery.com/category/properties/" title="View all posts in Properties">Properties</a> &gt; <a href="http://api.jquery.com/category/properties/jquery-object-instance-properties/" title="View all posts in Properties of jQuery Object Instances">Properties of jQuery Object Instances</a></span>
   
 
@@ -14,20 +14,20 @@
 </div>
 <div id="context1" class="entry property">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">context</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Element">Element</a></span>
+<span class="name">context</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Element">Element</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>The DOM node context originally passed to jQuery(); if none was passed then context will likely be the document.</p>
+<p class="desc"><strong>Descrição: </strong>O nó contextual do DOM passado ao jQuery; Se nada for passado, o contexto provavelmente será o <em>document</em></p>
 <ul class="signatures"><li class="signature" id="context"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.3/">1.3</a></span>context</h4></li></ul>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.3/">1.3</a></span>context</h4></li></ul>
 <div class="longdesc">
-<p>The <code>.live()</code> method for binding event handlers uses this property to determine the root element to use for its event delegation needs. Plug-ins which perform similar tasks may also find the property useful.</p>
+<p>O método <code>.live()</code> para vincular <em>event handlers</em> utiliza esta propriedade para determinar o elemento root que irá utilizar para as delegações necessárias. Plug-ins que executam tarefas semelhantes também pode utilizá-lo.</p>
 <p>
-The value of this property is typically equal to document, as this is the default context for jQuery objects if none is supplied. The context may differ if, for example, the object was created by searching within an <code>&lt;iframe&gt;</code> or XML document.</p>
+O valor desta propriedade é tipicamente igual ao <em>document</em>, The value of this property is typically equal to document, pois este é o contexto padrão para objetos jQuery, se nada for passado. O contexto pode ser diferente se, por exemplo, o objeto foi criado através de pesquisa dentro de um <code>&lt;iframe&gt;</code> ou documento XML.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Determine the exact context used.</span></h4>
+<h4><span class="desc">Determina exatamente o contexto utilizado.</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
