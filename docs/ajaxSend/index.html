@@ -6,7 +6,7 @@
           <h1 class="jq-clearfix">.ajaxSend()</h1>
           <div class="entry-meta jq-clearfix">
                         Categorias:
-            <span class="category"><a href="http://api.jquery.com/category/ajax/" title="View all posts in Ajax">Ajax</a> &gt; <a href="http://api.jquery.com/category/ajax/global-ajax-event-handlers/" title="View all posts in Global Ajax Event Handlers">Manipuladores de Eventos Globais do Ajax</a></span>
+            <span class="category"><a href="http://api.jquery.com/category/ajax/" title="View all posts in Ajax">Ajax</a> &gt; <a href="http://api.jquery.com/category/ajax/global-ajax-event-handlers/" title="View all posts in Global Ajax Event Handlers">Global Ajax Event Handlers</a></span>
   
 
           </div>
@@ -24,12 +24,12 @@
 <p class="arguement"><strong>handler(event, jqXHR, ajaxOptions)</strong>A função a ser invocada.</p>
 </li></ul>
 <div class="longdesc">
-<p>Sempre que uma requisição Ajax está prestes a ser enviada, JQuery dispara o evento <code>ajaxSend</code> . Qualquer e todos os manipuladores que tenham sido registrados com o método<code>.ajaxSend()</code> são executados nesse momento.</p>
+<p>Sempre que uma requisição Ajax está prestes a ser enviada, JQuery dispara o evento <code>ajaxSend</code> . Qualquer e todos os handlers que tenham sido registrados com o método<code>.ajaxSend()</code> são executados nesse momento.</p>
 <p>Para observar este método em ação, podemos criar uma requisição básica de carga Ajax:</p>
 <pre>&lt;div class="trigger"&gt;Trigger&lt;/div&gt;
 &lt;div class="result"&gt;&lt;/div&gt;
 &lt;div class="log"&gt;&lt;/div&gt;</pre>
-<p>Podemos incluir nosso manipulador de evento a qualquer elemento:</p>
+<p>Podemos incluir nosso event handler a qualquer elemento:</p>
 <pre>$('.log').ajaxSend(function() {
   $(this).text('Triggered ajaxSend handler.');
 });</pre>
@@ -39,7 +39,7 @@
 });</pre>
 <p>Quando o usuário clica no botão e a requisição Ajax está prestes a iniciar, a mensagem de log é exibida.</p>
 <p><strong>Nota:</strong> Porque <code>.ajaxSend()</code> é implementado como um método das instâncias do JQuery, nós podemos usar a palavra reservada <code>this</code> como fazemos aqui para nos referir aos objetos selecionados dentro da função de callback.</p>
-<p>Todos os manipuladores <code>ajaxSend</code> são invocados, independente de qual requisição Ajax está prestes a ser enviada. Se somos obrigados a diferenciar entre as requisições, nós podemos usar os parâmetros passados ao manipulaor. Cada vez que um manipulador <code>ajaxSend</code> é executado, é passado o objeto do evento, o objeto <code>jqXHR</code> (na versão 1.4, <code>XMLHttpRequest</code>), e o objeto de configuração <a href="http://api.jquery.com/jQuery.ajax/"></a> que foi usado na criação da requisição Ajax. Por examplo, podemos restringir nosso callback para apenas tratar eventos que lidam com uma URL em particular:</p>
+<p>Todos os handlers <code>ajaxSend</code> são invocados, independente de qual requisição Ajax está prestes a ser enviada. Se somos obrigados a diferenciar entre as requisições, nós podemos usar os parâmetros passados ao manipulaor. Cada vez que um handler <code>ajaxSend</code> é executado, é passado o objeto do evento, o objeto <code>jqXHR</code> (na versão 1.4, <code>XMLHttpRequest</code>), e o objeto de configuração <a href="http://api.jquery.com/jQuery.ajax/"></a> que foi usado na criação da requisição Ajax. Por examplo, podemos restringir nosso callback para apenas tratar eventos que lidam com uma URL em particular:</p>
 <pre>$('.log').ajaxSend(function(e, jqxhr, settings) {
   if (settings.url == 'ajax/test.html') {
     $(this).text('Triggered ajaxSend handler.');
