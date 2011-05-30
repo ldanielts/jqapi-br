@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">.serializeArray()</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/forms/" title="View all posts in Forms">Forms</a></span> | <span class="category"><a href="http://api.jquery.com/category/ajax/" title="View all posts in Ajax">Ajax</a> &gt; <a href="http://api.jquery.com/category/ajax/helper-functions/" title="View all posts in Helper Functions">Helper Functions</a></span>
   
 
@@ -14,14 +14,14 @@
 </div>
 <div id="serializeArray1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">.serializeArray()</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Array">Array</a></span>
+<span class="name">.serializeArray()</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Array">Array</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Encode a set of form elements as an array of names and values.</p>
+<p class="desc"><strong>Description: </strong>Transformar um conjunto de elementos de formulário em uma array de names e values.</p>
 <ul class="signatures"><li class="signature" id="serializeArray"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>.serializeArray()</h4></li></ul>
+<span class="versionAdded">versão adicionada: <a href="/category/version/1.2/">1.2</a></span>.serializeArray()</h4></li></ul>
 <div class="longdesc">
-<p>The <code>.serializeArray()</code> method creates a JavaScript array of objects, ready to be encoded as a JSON string. It operates on a jQuery object representing a set of form elements. The form elements can be of several types:</p>
+<p>O método <code>.serializeArray()</code> cria uma array de objetos, pronta para ser transformada em uma string JSON. Isto trabalha no objeto jQuery representando um conjunto de elementos de um formulário. Os elementos do formulário pode ter os seguintes tipos:</p>
 <pre>&lt;form&gt;
   &lt;div&gt;&lt;input type="text" name="a" value="1" id="a" /&gt;&lt;/div&gt;
   &lt;div&gt;&lt;input type="text" name="b" value="2" id="b" /&gt;&lt;/div&gt;
@@ -41,13 +41,13 @@
     &lt;input type="submit" name="g" value="Submit" id="g" /&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-<p>The <code>.serializeArray()</code> method uses the standard W3C rules for <a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.2">successful controls</a> to determine which elements it should include; in particular the element cannot be disabled and must contain a <code>name</code> attribute. No submit button value is serialized since the form was not submitted using a button. Data from file select elements is not serialized.</p>
-<p>This method can act on a jQuery object that has selected individual form elements, such as <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code>. However, it is typically easier to select the <code>&lt;form&gt;</code> tag itself for serialization:</p>
+<p>O método <code>.serializeArray()</code> utiliza as regras do padrão W3C de <a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.2">"controles de sucesso"</a> para determinar quais elementos serão incluídos; em particular elementos não podem ser <code>disabled</code> e tem que conter o atributo <code>name</code>. O valor do botão submit é <em>serializado</em> desde que o formulário não tenha sido submetido utilizando este botão. Dados de um elemento <code>file</code> não são <em>serializados</em>.</p>
+<p>Este método pode agir em um objeto jQuery que tiver um selecioando um elemento individual do formulário, como um <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, ou um <code>&lt;select&gt;</code>. De qualquer forma, isto é mais fácil selecionar a tag <code>&lt;form&gt;</code> para ser <em>serializado</em>:</p>
 <pre>$('form').submit(function() {
   console.log($(this).serializeArray());
   return false;
 });</pre>
-<p>This produces the following data structure (provided that the browser supports <code>console.log</code>):</p>
+<p>Isto retornará a seguinte estrutura de dados (provavelmente isso se o browser suportar <code>console.log</code>):</p>
 <pre>[
   {
     name: a
@@ -71,9 +71,9 @@
   }
 ]</pre>
 </div>
-<h3>Example:</h3>
+<h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Get the values from a form, iterate through them, and append them to a results display.</span></h4>
+<h4><span class="desc">Pega os valores do formulário, faz uma iteração a cada item e adiciona ele na visualização em #results</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
