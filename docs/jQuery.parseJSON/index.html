@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">jQuery.parseJSON</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/utilities/" title="View all posts in Utilities">Utilities</a></span>
   
 
@@ -14,27 +14,26 @@
 </div>
 <div id="jQuery-parseJSON1" class="entry method">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.parseJSON( json )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
+<span class="name">jQuery.parseJSON( json )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#Object">Object</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Takes a well-formed JSON string and returns the resulting JavaScript object.</p>
+<p class="desc"><strong>Descrição: </strong>Recebe uma string bem formatada em JSON e retorna um objeto JavaScript</p>
 <ul class="signatures"><li class="signature" id="jQuery-parseJSON-json">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.4.1/">1.4.1</a></span>jQuery.parseJSON( json )</h4>
-<p class="arguement"><strong>json</strong>The JSON string to parse.</p>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.1/">1.4.1</a></span>jQuery.parseJSON( json )</h4>
+<p class="arguement"><strong>json</strong>A string JSON que será transformada.</p>
 </li></ul>
 <div class="longdesc">
-<p>Passing in a malformed JSON string may result in an exception being thrown. For example, the following are all malformed JSON strings:</p>
+<p>Passando uma string JSON mal-formatada pode resultar em uma exceção. Por exemplo, algumas strings JSON mal-formatadas:</p>
 <ul>
 <li>
-<code>{test: 1}</code> (test does not have double quotes around it).</li>
+<code>{test: 1}</code> (<em>test</em> não está entre aspas duplas).</li>
 <li>
-<code>{'test': 1}</code> ('test' is using single quotes instead of double quotes).</li>
+<code>{'test': 1}</code> (<em>'test'</em> está utilizando aspas simples ao invés de aspas duplas).</li>
 </ul>
-<p>Additionally if you pass in nothing, an empty string, null, or undefined, 'null' will be returned from parseJSON. Where the browser provides a native implementation of <code>JSON.parse</code>, jQuery uses it to parse the string. For details on the JSON format, see <a href="http://json.org/">http://json.org/</a>.
-</p>
+<p>Além disso, se você não passar nada, uma string vazia, <em>null</em> ou <em>undefined</em>, '<em>null</em>' será retornado a partir do parseJSON. Se o navegador fornecer uma implementação nativa de <code>JSON.parse</code>, o jQuery utiliza ele para analisar a cadeia. Para mais detalhes sobre o formato JSON, consulte <a href="http://json.org/">http://json.org/</a>.</p>
 </div>
-<h3>Example:</h3>
+<h3>Exemple:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Parse a JSON string.</span></h4>
 <pre class="prettyprint"><code class="example">var obj = jQuery.parseJSON('{"name":"John"}');
