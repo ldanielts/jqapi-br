@@ -17,7 +17,7 @@
 <span class="name">.scroll( handler(eventObject) )</span> <span class="returns">Retorna: <a class="return" href="http://api.jquery.com/Types/#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Descrição: </strong> Adiciona um manipulador de evento ao evento "scroll" do JavaScript ou dispara o evento em um elemento.</p>
+<p class="desc"><strong>Descrição: </strong> Adiciona um handler ao evento "scroll" do JavaScript ou dispara o evento em um elemento.</p>
 <ul class="signatures">
 <li class="signature" id="scroll-handlereventObject">
 <h4 class="name">
@@ -27,7 +27,7 @@
 <li class="signature" id="scroll-eventData-handlereventObject">
 <h4 class="name">
 <span class="versionAdded">adicionado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.scroll( [ eventData ], handler(eventObject) )</h4>
-<p class="arguement"><strong>eventData</strong>Um mapa de dados que será passado ao manipulador do evento.</p>
+<p class="arguement"><strong>eventData</strong>Um mapa de dados que será passado ao handler.</p>
 <p class="arguement"><strong>handler(eventObject)</strong>Uma função a ser executada cada vez que o evento é disparado.</p>
 </li>
 <li class="signature" id="scroll"><h4 class="name">
@@ -35,7 +35,7 @@
 </ul>
 <div class="longdesc">
 <p>Esse método é um atalho para <code>.bind('scroll', handler)</code> na priemeira e segunda variação, e <code>.trigger('scroll')</code> na terceira.</p>
-<p>O evento <code>scroll</code> é enviado a um elemento quando o usuário efetuar rola a um lugar diferente no elemento. Aplica-se ao objeto <code>window</code>, mas também à frames roláveis e elementos com a propriedade CSS <code>overflow </code> definida como <code>scroll</code> (ou <code>auto</code> quando o elemento explícita a altura, ou a largura é menor que a altura ou largura desse conteúdo).</p>
+<p>O evento <code>scroll</code> é enviado a um elemento quando o usuário rolar a um lugar diferente no elemento. Aplica-se ao objeto <code>window</code>, mas também à frames roláveis e elementos com a propriedade CSS <code>overflow </code> definida como <code>scroll</code> (ou <code>auto</code> quando o elemento explícita a altura, ou a largura é menor que a altura ou largura desse conteúdo).</p>
 <p>Exemplo, considerando o HTML:</p>
 <pre>&lt;div id="target" style="overflow: scroll; width: 200px; height: 100px;"&gt;
   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -48,28 +48,28 @@
   officia deserunt mollit anim id est laborum.
 &lt;/div&gt;
 &lt;div id="other"&gt;
-  Dispare o manipulador
+  Dispare o handler
 &lt;/div&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 <p>O estilo definido é para deixar o elemento alvo menor o suficiente para ser rolável:</p>
 <p class="image"><img src="/images/0042_05_11.png" alt=""></p>
-<p>O manipulador de evento <code>scroll</code> pode ser ligado nesse elemento:</p>
+<p>O handler do <code>scroll</code> pode ser ligado nesse elemento:</p>
 <pre>$('#target').scroll(function() {
-  $('#log').append('&lt;div&gt;Manipulador para .scroll() chamado.&lt;/div&gt;');
+  $('#log').append('&lt;div&gt;Handler do .scroll() chamado.&lt;/div&gt;');
 });</pre>
-<p>Agora quando o usuário rola o texto para cima ou para baixo, uma ou mais mensagens irão aparecer na <code>&lt;div id="log"&gt;&lt;/div&gt;</code>:</p>
-<p><span class="output">Manipulador para .scroll() chamado.</span></p>
+<p>Agora quando o usuário rolar o texto para cima ou para baixo, uma ou mais mensagens irão aparecer na <code>&lt;div id="log"&gt;&lt;/div&gt;</code>:</p>
+<p><span class="output">Handler para .scroll() chamado.</span></p>
 <p>Para disparar o evento manualmente, aplicar <code>.scroll()</code> sem argumentos:</p>
 <pre>$('#other').click(function() {
   $('#target').scroll();
 });</pre>
-<p>Após esse código ser executado, ao clicar em <span class="output">"Dispare o manipulador"</span> irá adicionar a mensagem.</p>
+<p>Após esse código ser executado, ao clicar em <span class="output">"Dispare o handler"</span> irá adicionar a mensagem.</p>
 <p>Um evento <code>scroll</code> é enviado sempre que a posição do scroll de um elemento muda, independentemente da causa. Um click, ou ao arrastar a barra de rolagem, arrastando dentro do elemento, 
 apertando as flechinhas, ou usando a rodinha do mouse, pode causar o evento.</p>
 </div>
 <h3>Exemplo:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
-<h4><span class="desc">Fazer algo quando a página é rodada:</span></h4>
+<h4><span class="desc">Fazer algo quando a página é rolada:</span></h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
