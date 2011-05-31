@@ -5,7 +5,7 @@
           
           <h1 class="jq-clearfix">.jquery</h1>
           <div class="entry-meta jq-clearfix">
-                        Categories:
+                        Categorias:
             <span class="category"><a href="http://api.jquery.com/category/internals/" title="View all posts in Internals">Internals</a></span> | <span class="category"><a href="http://api.jquery.com/category/properties/" title="View all posts in Properties">Properties</a> &gt; <a href="http://api.jquery.com/category/properties/jquery-object-instance-properties/" title="View all posts in Properties of jQuery Object Instances">Properties of jQuery Object Instances</a></span>
   
 
@@ -17,17 +17,17 @@
 <span class="name">jquery</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#String">String</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>A string containing the jQuery version number.</p>
+<p class="desc"><strong>Descrição: </strong>Uma string contendo o número da versão do jQuery.</p>
 <ul class="signatures"><li class="signature" id="jquery"><h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jquery</h4></li></ul>
-<div class="longdesc"><p>The <code>.jquery</code> property is assigned to the jQuery prototype, commonly referred to by its alias <code>$.fn</code>. It is a string containing the version number of <code>jQuery</code>, such as "1.5.0" or "1.4.4".</p></div>
-<h3>Examples:</h3>
+<span class="versionAdded">adicionado na versão: <a href="/category/version/1.0/">1.0</a></span>jquery</h4></li></ul>
+<div class="longdesc"><p>A propriedade <code>.jquery</code> é associada ao jQuery prototype, associado pelo <em>alias</em> <code>$.fn</code>. Na string terá o número da versão do <code>jQuery</code>, como "1.5.0" ou "1.4.4".</p></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Determine if an object is a jQuery object</span>
+<h4>Exemplo: <span class="desc">Verifica se o objeto é um objeto jQuery</span>
 </h4>
 <pre class="prettyprint"><code class="example">
-var a = { what: "A regular JS object" },
+var a = { what: "Um objeto JS regular" },
     b = $('body');
      
 if ( a.jquery ) { // falsy, since it's undefined
@@ -40,7 +40,7 @@ if ( b.jquery ) { // truthy, since it's a string
 </code></pre>
 </div>
 <div id="example-1">
-<h4>Example: <span class="desc">Get the current version of jQuery running on the page</span>
+<h4>Exemplo: <span class="desc">Recebe a versão corrente do jQuery que está incluído na página</span>
 </h4>
 <pre class="prettyprint"><code class="example">
 alert( 'You are running jQuery version: ' + $.fn.jquery );
