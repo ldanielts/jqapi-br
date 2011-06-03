@@ -29,35 +29,35 @@
 <h4 class="name">
 <span class="versionAdded">criado na versão: <a href="/category/version/1.4.3/">1.4.3</a></span>.fadeIn( [ duration ], [ easing ], [ callback ] )</h4>
 <p class="arguement"><strong>duration</strong>Uma string ou número determinando por quanto tempo a animação vai rodar.</p>
-<p class="arguement"><strong>easing</strong>Uma string indicando qual função facilitadora usar para a transição.</p>
+<p class="arguement"><strong>easing</strong>Uma string indicando qual função de atenuação usar para a transição.</p>
 <p class="arguement"><strong>callback</strong>Uma função a ser chamada logo que a animação terminar.</p>
 </li>
 </ul>
 <div class="longdesc">
-<p>The <code>.fadeIn()</code> method animates the opacity of the matched elements.</p>
-<p>Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings <code>'fast'</code> and <code>'slow'</code> can be supplied to indicate durations of <code>200</code> and <code>600</code> milliseconds, respectively. If any other string is supplied, or if the <code>duration</code> parameter is omitted, the default duration of  <code>400</code> milliseconds is used.</p>
-<p>As of jQuery 1.4.3, an optional string naming an easing function may be used. Easing functions specify the speed at which the animation progresses at different points within the animation. The only easing implementations in the jQuery library are the default, called <code>swing</code>, and one that progresses at a constant pace, called <code>linear</code>. More easing functions are available with the use of plug-ins, most notably the <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
-<p>If supplied, the callback is fired once the animation is complete. This can be useful for stringing different animations together in sequence. The callback is not sent any arguments, but <code>this</code> is set to the DOM element being animated. If multiple elements are animated, it is important to note that the callback is executed once per matched element, not once for the animation as a whole.</p>
-<p>We can animate any element, such as a simple image:</p>
+<p>O método <code>.fadeIn()</code> anima a opacidade dos elementos alvo de um seletor JQuery.</p>
+<p>As durações são dadas em milissegundos; valores mais altos indicam animações mais demoradas, não as mais rápidas. As strings strings <code>'fast'</code> e <code>'slow'</code> podem ser fornecidas para indicar durações de <code>200</code> e <code>600</code> milissegundos, respectivamente. Se qualquer outra string for informada, ou se o parâmetro <code>duration</code> for omitido, a duração default de  <code>400</code> milissegundos será usada.</p>
+<p>Desde a versão 1.4.3 do JQuery, uma string opcional contendo o nome de uma função de atenuação pode ser usada. Funções de atenuação especificam a velocidade na qual a animação progride em diferentes pontos na animação. As únicas implementações de atenuação na biblioteca jQuery são as default, chamadas <code>swing</code>, e uma que progride num ritmo constante, chamada <code>linear</code>. Mais funções de atenuação estão disponíveis através do uso de plug-ins, mais notavelmente a <a href="http://jqueryui.com">jQuery UI suite</a>.</p>
+<p>Se fornecida, a função callback é disparada logo que a animação termina. Isto pode ser útil para amarrar diferentes animações em sequência. A função callback não recebe argumentos, mas <code>this</code> representa o elemento DOM sendo animado. Se múltiplos elementos forem animados, é importante notar que o callback é executado uma vez para cada elemento, não uma vez para a animação inteira.</p>
+<p>Nós podemos animar qualquer elemento, como uma imagem simples:</p>
 <pre>&lt;div id="clickme"&gt;
-      Click here
+      Clique aqui
     &lt;/div&gt;
     &lt;img id="book" src="book.png" alt="" width="100" height="123" /&gt;
-    With the element initially hidden, we can show it slowly:
+    Com o elemento invisível no início, nós podemos mostrá-lo devagar:
     $('#clickme').click(function() {
       $('#book').fadeIn('slow', function() {
-        // Animation complete
+        // Animação completa
       });
     });</pre>
 <p class="image four-across">
       <img src="/images/0042_06_33.png" alt=""><img src="/images/0042_06_34.png" alt=""><img src="/images/0042_06_35.png" alt=""><img src="/images/0042_06_36.png" alt=""></p>
 </div>
-<h3 id="notes-0">Additional Notes:</h3>
-<div class="longdesc"><ul><li>All jQuery effects, including <code>.fadeIn()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>, which effectively sets the duration to 0. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
-<h3>Examples:</h3>
+<h3 id="notes-0">Notas adicionais:</h3>
+<div class="longdesc"><ul><li>Todos os efeitos jQuery, incluindo <code>.fadeIn()</code>, podem ser desligados globalmente setando  <code>jQuery.fx.off = true</code>, o que efetivamente seta a duração para 0. Para mais informações, veja <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
+<h3>Exemplos:</h3>
 <div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">Animates hidden divs to fade in one by one, completing each animation within 600 milliseconds.</span>
+<h4>Exemplo: <span class="desc">Anima divs ocultas desvanecendo-as uma por uma, completando cada animação em 600 milissegundos.</span>
 </h4>
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
